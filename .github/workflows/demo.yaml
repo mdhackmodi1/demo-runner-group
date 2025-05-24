@@ -13,4 +13,4 @@ jobs:
                   echo "Hello github enterprise!"
 
             - name: getting ip of runner
-              run:  curl -v http://httpbin.org/ip/
+              run:  curl -v http://httpbin.org/ip
