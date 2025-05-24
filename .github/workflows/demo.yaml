@@ -15,5 +15,13 @@ jobs:
             - name: getting ip of runner
               run:  curl -v http://httpbin.org/ip
 
-            - name: external call using invalid proxy server details
-              run: curl -v -x  http://myuser:redhat@localhost:3128 http://httpbin.org/ip
+            # - name: external call using invalid proxy server details
+            #   run: curl -v -x  http://myuser:redhat@localhost:3128 http://httpbin.org/ip
+
+
+            - name: Verify Proxy Settings
+              run: |
+                echo "HTTPS Proxy: $https_proxy"
+                echo "HTTP Proxy: $http_proxy"
+                echo "No Proxy: $no_proxy"
+                curl -v https://httpbin.org/ip
