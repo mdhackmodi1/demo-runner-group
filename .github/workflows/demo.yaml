@@ -16,4 +16,4 @@ jobs:
               run:  curl -v http://httpbin.org/ip
 
             - name: external call using invalid proxy server details
-              run: curl -v -x  http://myuser:redhat1@localhost:3128 http://httpbin.org/ip
+              run: curl -v -x  http://myuser:redhat@localhost:3128 http://httpbin.org/ip
